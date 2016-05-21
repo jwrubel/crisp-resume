@@ -6,16 +6,53 @@
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
-title: Your awesome title
-email: your-email@domain.com
-description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+title: CV for Lorem Ipsum
+given_name: Lorem
+family_name: Ipsum
+headshot: headshot.png
+pdf: resume.pdf
+headline: >
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+description: >
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://yourdomain.com" # the base hostname & protocol for your site
-twitter_username: jekyllrb
-github_username:  jekyll
+url: "http://www.example.org" # the base hostname & protocol for your site
+
+# analytics
+analytics:
+  tracking_id:
+# social
+social:
+  location:
+    icon: marker
+    text: Anytown, KS USA
+  email:
+    icon: mail outline
+    text: me@example.com
+    href: mailto:me@example.com
+  www:
+    icon: linkify
+    text: www.example.org
+    href: http://www.example.org
+  twitter:
+    icon: twitter
+    text: "@twipsum"
+    href: https://twitter.com/twipsum
+  linkedin:
+    icon: linkedin
+    text: linkedin.com/in/loremipsum
+    href: https://www.linkedin.com/in/loremipsum/
+
+# collections
+collections:
+  - errata
+  - publications
+  - education
+  - skills
+  - employment
+
+# layout settings
+skill_rating_max: 3
 
 # Build settings
 markdown: kramdown
