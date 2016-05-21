@@ -1,0 +1,32 @@
+{% if site.education %}
+  <h4 class="ui horizontal divider header">
+    <i class="teal university outline icon"></i>
+    Education
+  </h4>
+  <a name="education"></a>
+  <div class="row">
+    <div class="ui two stackable cards">
+      {% for entry in site.education %}
+        <div class="ui card">
+          <div class="content">
+            <img class="right floated mini ui circular image" src="images/{{ entry.image }}">
+            <div class="header">{{ entry.institution }}</div>
+            <div class="ui sub header">{{ entry.degree }}</div>
+            <div class="meta">
+              <span class="location">
+                <i class="marker icon"></i>
+                {{ entry.location }}
+              </span>
+              <span class="right floated time">{{ entry.date_string }}</span>
+            </div>
+          </div>
+          <div class="content">
+            <div class="description">
+              {{ entry.description }}
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+{% endif %}

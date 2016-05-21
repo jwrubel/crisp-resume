@@ -1,0 +1,43 @@
+{% if site.skills %}
+  <h4 class="ui horizontal divider header">
+    <i class="teal configure icon"></i>
+    Skills
+  </h4>
+  <a name="skills"></a>
+  <div class="row">
+    <div class="ui three stackable cards">
+      {% assign entries = site.skills | sort: 'order' %}
+      {% for entry in entries %}
+        <div class="ui fluid card">
+          <div class="content">
+            <i class="right floated {{ entry.icon }} icon"></i>
+            <div class="header">
+              {{ entry.title }}
+            </div>
+            <div class="meta">
+              {{ entry.description }}
+            </div>
+          {% if entry.skills %}
+            <table class="ui small basic table">
+              <tbody>
+                {% for skill in entry.skills %}
+                  {% assign name = skill[0] %}
+                  {% assign rating = skill[1].rating %}
+                  <tr>
+                    <td>
+                      {{ name }}
+                    </td>
+                    <td>
+                      <div class="ui star rating" data-rating="{{rating}}" data-max-rating="{{site.skill_rating_max}}"></div>
+                    </td>
+                  </tr>
+                {% endfor %}
+              </tbody>
+            </table>
+          </div>
+          {% endif %}
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+{% endif %}

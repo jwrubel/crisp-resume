@@ -1,0 +1,28 @@
+{% if site.social %}
+  <div class="ui raised segment">
+    {% if site.pdf %}
+      <a class="ui red right ribbon label" href="images/{{ site.pdf }}" target="_blank">
+        <i class="file pdf outline icon"></i>
+        Download PDF
+      </a>
+    {% endif %}
+    <div class="ui list">
+      {% assign channels = site.social %}
+      {% for channel in channels %}
+        {% assign entry = channel[1] %}
+        <div class="item">
+          <i class="{{ entry.icon }} icon"></i>
+          {% if entry.href %}
+            <a class="content" href="{{ entry.href }}" target="_blank">
+              {{ entry.text }}
+            </a>
+          {% else %}
+            <div class="content">
+              {{ entry.text }}
+            </div>
+          {% endif %}
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+{% endif %}

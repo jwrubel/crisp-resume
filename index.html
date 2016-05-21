@@ -1,0 +1,58 @@
+---
+---
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="{{ site.headline }}">
+    <link href="//cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/semantic.min.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    {% include favicons.html %}
+    {% include seo.html %}
+    <title>{{ site.title }}</title>
+    {% include analytics.html %}
+  </head>
+  <body>
+    {% include sidebar.html %}
+    <div class="mobile hidden">
+      {% include menu.html %}
+    </div>
+    <div class="mobile only">
+      <div class="ui fixed borderless menu">
+        <div class="item">
+          <div class="ui launch right">
+            <i class="icon teal list layout"></i>
+          </div>
+        </div>
+        {% if site.headshot %}
+          <div class="item">
+            <img class="ui mini circular image" src="images/{{ site.headshot }}">
+          </div>
+        {% endif %}
+        <div class="item">
+          <h4 class="ui header">{{ site.given_name }} {{ site.family_name }}</h4>
+        </div>
+      </div>
+    </div>
+    <div class="pusher">
+      <div class="ui stackable grid container" id="content">
+        <div class="ten wide column">
+          {% include about_me.html %}
+        </div>
+        <div class="six wide column">
+          {% include social_panel.html %}
+        </div>
+        {% include employment.html %}
+        {% include skills.html %}
+        {% include education.html %}
+        {% include publications.html %}
+        {% include errata.html %}
+      </div>
+    </div>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/semantic.min.js"></script>
+    <script src="/javascripts/main.js"></script>
+  </body>
+</html>

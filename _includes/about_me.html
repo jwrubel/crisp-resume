@@ -1,0 +1,9 @@
+<div class="ui basic segment">
+  <a name="about"></a>
+  {% if site.headshot %}
+    <div class="mobile hidden">
+      <img class="ui small left floated circular image" src="images/{{ site.headshot }}">
+    </div>
+  {% endif %}
+  <p>{{ site.headline }} {{ site.description }}</p>
+</div>

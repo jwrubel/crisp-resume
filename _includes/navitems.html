@@ -1,0 +1,34 @@
+<a class="item" href="#about">
+  <i class="teal info circle icon"></i>
+  About Me
+</a>
+{% if site.employment %}
+  <a class="item" href="#work">
+    <i class="teal building icon"></i>
+    Work
+  </a>
+{% endif %}
+{% if site.skills %}
+  <a class="item" href="#skills">
+    <i class="teal configure icon"></i>
+    Skills
+  </a>
+{% endif %}
+{% if site.education %}
+  <a class="item" href="#education">
+    <i class="teal university icon"></i>
+    Education
+  </a>
+{% endif %}
+{% if site.publications %}
+  <a class="item" href="#pubs">
+    <i class="teal newspaper icon"></i>
+    Publications
+  </a>
+{% endif %}
+{% if site.errata %}
+  <a class="item" href="#misc">
+    <i class="teal puzzle icon"></i>
+    Miscellaneous
+  </a>
+{% endif %}

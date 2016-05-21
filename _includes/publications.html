@@ -1,0 +1,31 @@
+{% if site.publications %}
+  <h4 class="ui horizontal divider header">
+    <i class="teal newspaper outline icon"></i>
+    Publications and Presentations
+  </h4>
+  <a name="pubs"></a>
+  <div class="row">
+    <div class="ui three stackable cards">
+      {% for entry in site.publications %}
+        <div class="ui card">
+          <div class="content">
+            <i class="right floated {{ entry.icon }} icon"></i>
+            <a class="header" href="{{ entry.title_href }}" target="_blank">{{ entry.title }}</a>
+            <div class="meta">
+              <div class="ui list">
+                {% for author in entry.authors %}
+                <div class="item">
+                  {{ author.name }}
+                </div>
+                {% endfor %}
+              </div>
+            </div>
+            <div class="description">
+              {{ entry.detail}}
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+{% endif %}

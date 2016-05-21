@@ -1,0 +1,83 @@
+{% comment %}
+  Inspiration for some of the properties and structure used here comes from
+  the minimal-mistakes jekyll template at
+  https://github.com/mmistakes/minimal-mistakes
+{% endcomment %}
+
+{% if site.headshot && site.url %}
+  {% assign headshot_path = site.headshot | prepend: "/images/" | prepend: site.url %}
+{% endif %}
+<link rel="canonical" href="{{ site.url }}">
+
+{% comment %}
+  OGP data
+  http://ogp.me/
+{% endcomment %}
+{% if site.social.location %}
+  <meta property="og:locale" content="{{ site.social.location.text }}">
+{% endif %}
+<meta property="og:site_name" content="{{ site.title }}">
+<meta property="og:title" content="{{ site.title }}">
+
+{% if site.url %}
+  <meta property="og:url" content="{{ site.url }}">
+{% endif %}
+
+{% if site.description %}
+  <meta property="og:description" content="{{ site.description }}">
+{% endif %}
+
+{% if headshot_path %}
+  <link rel="image_src" href="{{ headshot_path }}" />
+  <meta property="og:image" content="{{ headshot_path }}">
+{% endif %}
+
+<meta property="og:type" content="profile">
+<meta property="profile:first_name" content="{{ site.given_name }}">
+<meta property="profile:last_name" content="{{ site.family_name }}">
+
+{% comment %}
+  Twitter card reference at:
+  https://dev.twitter.com/cards/types/summary
+  Validate your card at:
+  https://cards-dev.twitter.com/validator
+{% endcomment %}
+
+{% if site.social.twitter %}
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="{{ site.social.twitter.text }}" />
+  <meta name="twitter:title" content="{{ site.given_name }} {{ site.family_name }}" />
+  <meta name="twitter:description" content="{{ site.headline }}" />
+  {% if headshot_path %}
+    <meta name="twitter:image" content="{{ headshot_path }}" />
+    <meta name="twitter:image:alt" content="Photo of {{ site.given_name }} {{ site.family_name }}" />
+  {% endif %}
+{% endif %}
+
+{% comment %}
+  Google Social Profile support
+  see: https://developers.google.com/structured-data/customize/social-profiles
+  validate at:
+  https://developers.google.com/structured-data/testing-tool/
+{% endcomment %}
+
+{% if site.social %}
+  <script type="application/ld+json">
+  {
+    "@context" : "http://schema.org",
+    "@type" : "Person",
+    "name" : "{{ site.given_name }} {{ site.family_name }}",
+    "url" : "{{ site.url }}",
+    "sameAs" : [
+      {% for channel in site.social %}
+        {% if channel[1].href %}
+          "{{ channel[1].href}}"
+          {% unless forloop.last %}
+            ,
+          {% endunless %}
+        {% endif %}
+      {% endfor %}
+    ]
+  }
+  </script>
+{% endif %}

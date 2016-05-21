@@ -1,0 +1,45 @@
+{% if site.employment %}
+  <h4 class="ui horizontal divider header">
+    <i class="teal building outline icon"></i>
+    Work History
+  </h4>
+  <a name="work"></a>
+  {% assign entries = site.employment | sort: 'order' %}
+  {% for entry in entries %}
+    <div class="row">
+      <div class="ui one cards">
+        <div class="ui card">
+          <div class="content">
+            <div class="header">{{ entry.position }}</div>
+            <h4 class="ui sub header">{{ entry.company }}</h4>
+            <div class="meta">
+              <span class="location">
+                <i class="marker icon"></i>
+                {{ entry.location }}
+              </span>
+              <span class="right floated time">{{ entry.duration }}</span>
+            </div>
+          </div>
+          <div class="content">
+            <div class="description">
+              <p>{{ entry.summary }}</p>
+              {% if entry.highlights %}
+                <h6 class="ui horizontal divider header">
+                  <i class="yellow empty star icon"></i>
+                  Highlights
+                </h6>
+                <div class="ui bulleted list">
+                  {% for highlight in entry.highlights %}
+                  <div class="item">
+                    {{ highlight.item }}
+                  </div>
+                  {% endfor %}
+                </div>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  {% endfor %}
+{% endif %}

@@ -1,0 +1,34 @@
+{% if site.errata %}
+  <h4 class="ui horizontal divider header">
+    <i class="teal puzzle icon"></i>
+    Miscellaneous
+  </h4>
+  <a name="misc"></a>
+  <div class="row">
+    <div class="ui three stackable cards">
+      {% for entry in site.errata %}
+        <div class="ui card">
+          <div class="content">
+            <i class="right floated {{ entry.icon }} icon"></i>
+            <div class="header">{{ entry.category }}</div>
+            <div class="meta">
+              {{ entry.title }}
+            </div>
+            <div class="description">
+              {{ entry.content }}
+            </div>
+          </div>
+          {% if entry.date_string && entry.location %}
+          <div class="extra content">
+            {{ entry.date_string }}
+            <span class="right floated">
+              <i class="marker icon"></i>
+              {{ entry.location }}
+            </span>
+          </div>
+          {% endif %}
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+{% endif %}
