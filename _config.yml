@@ -6,17 +6,17 @@
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
-title: CV for Lorem Ipsum
-given_name: Lorem
-family_name: Ipsum
-headshot: headshot.png
-pdf: resume.pdf
+title: CV for Eugene Mirman
+given_name: Eugene
+family_name: Mirman
+headshot: eugene.jpg
+pdf:
 headline: >
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+  Experienced Senior VP of Pee Pee at VeriZon. 
 description: >
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  After over 60 years as a teleporter at a Surprise Company, I decided to try something different. So here I am, with arms wide open, ready to start my next phase in life. If you have a tech company where people pee not how you like, for lots of money and fully vested A Stock, I fix everything/ make it good for you.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://www.example.org" # the base hostname & protocol for your site
+url: "http://www.eugenemirman.com/" # the base hostname & protocol for your site
 
 # analytics
 analytics:
@@ -25,23 +25,35 @@ analytics:
 social:
   location:
     icon: marker
-    text: Anytown, KS USA
+    text: New York City, NY USA
   email:
     icon: mail outline
-    text: me@example.com
-    href: mailto:me@example.com
+    text: info@eugenemirman.com
+    href: mailto:info@eugenemirman.com
   www:
     icon: linkify
-    text: www.example.org
-    href: http://www.example.org
+    text: www.eugenemirman.com
+    href: http://www.eugenemirman.com/
   twitter:
     icon: twitter
-    text: "@twipsum"
-    href: https://twitter.com/twipsum
+    text: "@EugeneMirman"
+    href: https://twitter.com/EugeneMirman
   linkedin:
     icon: linkedin
-    text: linkedin.com/in/loremipsum
-    href: https://www.linkedin.com/in/loremipsum/
+    text: linkedin.com/in/eugene-mirman-bb023396
+    href: https://www.linkedin.com/in/eugene-mirman-bb023396/
+  facebook:
+    icon: facebook
+    text: Eugene-Mirman-17472821218
+    href: https://www.facebook.com/Eugene-Mirman-17472821218/
+  instagram:
+    icon: instagram
+    text: eugenemirman
+    href: https://www.instagram.com/eugenemirman/
+  youtube:
+    icon: youtube
+    text: UCs6AsL_xzNdqD7EPJ0znelg
+    href: https://www.youtube.com/channel/UCs6AsL_xzNdqD7EPJ0znelg
 
 # collections
 collections:
