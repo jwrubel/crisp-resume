@@ -12,7 +12,7 @@ family_name: Mirman
 headshot: eugene.jpg
 pdf:
 headline: >
-  Experienced Senior VP of Pee Pee at VeriZon. 
+  Experienced Senior VP of Pee Pee at VeriZon.
 description: >
   After over 60 years as a teleporter at a Surprise Company, I decided to try something different. So here I am, with arms wide open, ready to start my next phase in life. If you have a tech company where people pee not how you like, for lots of money and fully vested A Stock, I fix everything/ make it good for you.
 baseurl: "" # the subpath of your site, e.g. /blog
@@ -58,7 +58,6 @@ social:
 # collections
 collections:
   - errata
-  - publications
   - education
   - skills
   - employment
